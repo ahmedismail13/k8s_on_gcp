@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+ 
+kind: Certificate
+metadata:
+  name: ahmedismail-me-ls
+spec:
+  secretName: ahmedismail-me
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: ahmedismail.me
+  dnsNames:
+    - ahmedismail.me
+    - www.ahmedismail.me
